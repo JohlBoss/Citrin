@@ -26,21 +26,10 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .form-container input {
+        iframe {
             width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .form-container input[type="submit"] {
-            background-color: #007BFF;
-            color: white;
-            cursor: pointer;
+            height: 800px;
             border: none;
-        }
-        .form-container input[type="submit"]:hover {
-            background-color: #0056b3;
         }
     </style>
 </head>
@@ -49,44 +38,7 @@
   <h1>Submit Your Information</h1>
 </header>
 <div class="form-container">
-  <form id="myForm">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="entry.123456" required><br>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="entry.654321" required><br>
-
-    <input type="submit" value="Submit">
-  </form>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd48KezUZ5jtBzeSt7vQLkLpR2jiva8go0MP4J9uppiNG6QUA/viewform?embedded=true" width="640" height="2085" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </div>
-
-<script>
-    document.getElementById('myForm').submit = function(event) {
-        event.preventDefault(); // Prevent the default form submission
-
-        var formData = new FormData(document.getElementById('myForm'));
-
-        // Replace with your Google Form's action URL
-        var googleFormActionUrl = <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd48KezUZ5jtBzeSt7vQLkLpR2jiva8go0MP4J9uppiNG6QUA/viewform?embedded=true" width="640" height="2085" frame border="0" margin-height="0" margin width="0">Loading…</iframe>;
-
-        fetch(googleFormActionUrl, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json',
-            }
-        })
-        .then(response => {
-            if (response.ok) {
-                alert("Form submitted successfully!");
-            } else {
-                alert("Error submitting form.");
-            }
-        })
-        .catch(error => {
-            alert("Error: " + error);
-        });
-    };
-    </script>
 </body>
 </html>
