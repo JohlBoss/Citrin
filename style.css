@@ -1,64 +1,38 @@
-/* Reset */
-body, h1, p, a {
-    margin: 0;
-    padding: 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-
 /* General Styles */
 body {
-    background-color: #f0f8ff; /* Light blue background */
+    background-color: #f0f8ff; /* Light blue background for the whole page */
     color: #333;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center; /* Center all text for simplicity */
 }
 
-/* Header */
+/* Header Styles */
 header {
-    background-color: #b0e0e6; /* Light blue header */
-    color: #ffffff;
-    text-align: center;
+    background-color: #b0e0e6; /* Light blue header background */
+    color: #0078ff; /* Light blue text */
     padding: 2rem 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 header h1 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: #0078ff; /* Light blue for the title */
 }
 header p {
     font-size: 1.2rem;
-    color: #0078ff; /* Light blue for the description */
 }
 
-/* Hero Section */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 400px; /* Add height for visual interest */
-    background: linear-gradient(135deg, #add8e6, #f0f8ff); /* Light blue gradient */
-    background-size: cover;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    justify-content: center; /* Ensures content is centered */
-}
+/* Content Section Styles */
 .content {
-    text-align: center;
-    max-width: 600px;
-    background: rgba(255, 255, 255, 0.8); /* Subtle white background for readability */
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers the content */
-    justify-content: center; /* Centers the content */
+    max-width: 800px;
+    margin: 2rem auto;
+}
+.content p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
 }
 .cta-button {
     display: inline-block;
@@ -68,21 +42,21 @@ header p {
     margin-top: 1rem;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: all 0.3s ease-in-out;
 }
 .cta-button:hover {
     background-color: #005bb5;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
-    background-color: #b0e0e6; /* Light blue footer */
+    background-color: #b0e0e6; /* Light blue footer background */
     color: white;
-    text-align: center;
     padding: 1rem;
-    margin-top: auto;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 footer p {
     font-size: 0.9rem;
